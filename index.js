@@ -20,5 +20,5 @@ app.use("/api/songs/", songRoutes);
 app.use("/api/playlists/", playListRoutes);
 app.use("/api/", searchRoutes);
 
-const port = process.env.PORT || 3030;
-app.listen(port, () => console.log(`Rodando na Porta ${port}...`));
+const PORT = process.env.PORT || 3030;
+app.listen(PORT, () => console.log(`Rodando na Porta ${PORT}...`));
