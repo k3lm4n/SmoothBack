@@ -6,6 +6,7 @@ const connection = require("./db");
 const userRoutes = require("./routes/users");
 const authRoutes = require("./routes/auth");
 const songRoutes = require("./routes/songs");
+const videoRoutes = require("./routes/videos");
 const playListRoutes = require("./routes/playLists");
 const searchRoutes = require("./routes/search");
 const app = express();
@@ -17,6 +18,7 @@ app.use(express.json());
 app.use("/api/users/", userRoutes);
 app.use("/api/login/", authRoutes);
 app.use("/api/songs/", songRoutes);
+app.use("/api/videos/", videoRoutes);
 app.use("/api/playlists/", playListRoutes);
 app.use("/api/", searchRoutes);
 
