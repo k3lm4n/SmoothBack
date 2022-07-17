@@ -39,6 +39,12 @@ router.delete("/:id", [validateObjectId, admin], async (req, res) => {
 	res.status(200).send({ message: "Video Elimindo Com sucesso" });
 });
 
+// Get video by ID
+router.get("/:id", [validateObjectId], async (req, res) => {
+	const video = await Video.findById(req.params.id);
+	res.status(200).send({ data: video });
+});
+
 // Like video
 router.put("/like/:id", [validateObjectId, auth], async (req, res) => {
 	let resMessage = "";
