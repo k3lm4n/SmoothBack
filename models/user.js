@@ -33,7 +33,7 @@ const validate = (user) => {
     month: Joi.string().required(),
     date: Joi.string().required(),
     year: Joi.string().required(),
-    gender: Joi.string().valid("male", "female", "non-binary").required(),
+    gender: Joi.string().valid("Masculino", "Femenino", "non-binary").required(),
   });
   return schema.validate(user);
 };
